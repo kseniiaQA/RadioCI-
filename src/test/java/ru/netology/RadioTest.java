@@ -12,7 +12,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldInitFieldToZeroValue() {
+    public void shouldInitFieldToZeroValues() {
         Radio radio = new Radio();
         assertNull(radio.name);
         assertEquals(9, radio.MaxStation);
