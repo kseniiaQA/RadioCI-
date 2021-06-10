@@ -115,7 +115,7 @@ class RadioAdvancedTest {
 
 
     @Test
-    void shouldNotChangeOnNextRadioStationIfStationIsMax() {
+    void shouldNotChangeOnNextRadioStationStationIsMax() {
         RadioAdvanced radio = new RadioAdvanced();
         int currentStation = 9;
         radio.setCurrentStation(currentStation);
