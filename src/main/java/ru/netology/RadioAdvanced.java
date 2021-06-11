@@ -3,8 +3,8 @@ package ru.netology;
 public class RadioAdvanced {
     private String name;
     private int currentStation = 0;
-    private int MaxStation = 9;
-    private int MinStation = 0;
+    private int maxStation = 9;
+    private int minStation = 0;
     private int currentVolume = 0;
     private int MaxVolumeLevel = 10;
     private int MinVolumeLevel = 0;
@@ -23,29 +23,29 @@ public class RadioAdvanced {
     }
 
     public void setCurrentStation(int currentStation) {
-        if (currentStation > MaxStation) {
+        if (currentStation > maxStation) {
             return;
         }
-        if (currentStation < MinStation) {
+        if (currentStation < minStation) {
             return;
         }
         this.currentStation = currentStation;
     }
 
     public int getMaxStation() {
-        return MaxStation;
+        return maxStation;
     }
 
     public void setMaxStation(int maxStation) {
-        MaxStation = maxStation;
+        maxStation = maxStation;
     }
 
     public int getMinStation() {
-        return MinStation;
+        return minStation;
     }
 
     public void setMinStation(int minStation) {
-        MinStation = minStation;
+        minStation = minStation;
     }
 
     public int getCurrentVolume() {
@@ -98,16 +98,16 @@ public class RadioAdvanced {
     }
 
     public void changeOnPreviousRadioStation() {
-        if (currentStation == MinStation) {
-            this.currentStation = 9;
+        if (currentStation == minStation) {
+            this.currentStation = maxStation;
             return;
         }
         this.currentStation--;
     }
 
     public void changeOnNextRadioStation() {
-        if (currentStation == MaxStation) {
-            this.currentStation = 0;
+        if (currentStation == maxStation) {
+            this.currentStation = minStation;
             return;
         }
         this.currentStation++;
